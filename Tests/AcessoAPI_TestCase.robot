@@ -6,7 +6,7 @@ Resource   ../Resources/ResourceBDD.robot
 
 Registro um novo usuário na API
     Dado que estou autenticado na API
-    Quando informo o email "debora.silvahe17@email.com"
+    Quando informo o email "debora.silvahe18@email.com"
     E informo a senha "debora"
     E quero executar a ação "registrar"
     Então status retornado é "201"
@@ -14,7 +14,7 @@ Registro um novo usuário na API
 
 Faço login do novo usuário na API
     Dado que estou autenticado na API
-    Quando informo o email "debora.silvahe17@email.com"
+    Quando informo o email "debora.silvahe18@email.com"
     E informo a senha "debora"
     E quero executar a ação "login"
     Então status retornado é "200"
@@ -22,7 +22,7 @@ Faço login do novo usuário na API
 
 Valido o registro um usuário repetido na API
     Dado que estou autenticado na API
-    Quando informo o email "debora.silvahe17@email.com"
+    Quando informo o email "debora.silvahe18@email.com"
     E informo a senha "debora"
     E quero executar a ação "registrar"
     Então status retornado é "400"
@@ -48,7 +48,7 @@ Valido o registro de um usuário com email em branco
 
 Valido o registro de um usuário com senha em branco
     Dado que estou autenticado na API
-    Quando informo o email "adebora.silvahe17@email.com"
+    Quando informo o email "adebora.silvahe18@email.com"
     E quero executar a ação "registrar"
     Então status retornado é "400"
     E seleciono o item "message" que retornou
@@ -56,7 +56,7 @@ Valido o registro de um usuário com senha em branco
 
 Faço login sem informar a senha do novo usuário
     Dado que estou autenticado na API
-    Quando informo o email "debora.silvahe17@email.com"
+    Quando informo o email "debora.silvahe18@email.com"
     E quero executar a ação "login"
     Então status retornado é "400"
     E seleciono o item "message" que retornou

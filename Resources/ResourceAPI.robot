@@ -32,7 +32,7 @@ status retornado é "${STATUS_CODE}"
     Should Be Equal As Strings   ${RESPONSE.status_code}   ${STATUS_CODE}
 
 a mensagem retornada é "${MENSAGEM}"
-    Check message "${MENSAGEM}"
+    Run Keyword If   '${MENSAGEM}' is not '${Empty}'   Check message "${MENSAGEM}"
 
 ### API Actions ###
 

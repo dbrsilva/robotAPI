@@ -2,9 +2,9 @@
 Resource   ../Resources/ResourceAPI.robot
 Resource   ../Resources/ResourceBDD.robot
 
-*** Test Case ***
+*** Keywords ***
 
-Posto Request de usuário na API
+Post Request de usuário na API
     [Arguments]   ${ACTION}   ${STATUS}   ${ITEM}   ${EMAIL}=${Empty}   ${SENHA}=${Empty}   ${MESSAGE}=${Empty}
     Dado que estou autenticado na API
     Quando informo o email "${EMAIL}"
