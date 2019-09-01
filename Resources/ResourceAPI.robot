@@ -25,8 +25,8 @@ quero executar a ação "${ACTION}"
     Set Test Variable   ${ACTION}
     Execute Post Request
 
-seleciono o TOKEN gerado
-    Get Token API
+seleciono o item "${ITEM}" que retornou
+    Get Returned Value "${ITEM}"
 
 status retornado é "${STATUS_CODE}"
     Should Be Equal As Strings   ${RESPONSE.status_code}   ${STATUS_CODE}
@@ -44,10 +44,15 @@ Execute Post Request
     ${RESPONSE} =   Post Request   alias=${ALIAS_API}   uri=/${ACTION}   json=${DATA}
     Set Test Variable   ${RESPONSE}
 
+# Execute Get Request
+#     ${RESPONSE} =   Get Request   alias=${ALIAS_API}   uri=/${ACTION}   json=${DATA}
+#     Set Test Variable   ${RESPONSE}
+
+
 ### API Response values ###
 
-Get Token API
-    Set Suite Variable    ${TOKEN}   ${RESPONSE.json()['token']}
+Get Returned Value "${ITEM}"
+    Set Test Variable    ${ITEM}   ${RESPONSE.json()['${ITEM}']}
 
 Check message "${MESSAGE}"
-    Should Be Equal As Strings   ${RESPONSE.json()['message']}   ${MESSAGE}
+    Should Be Equal As Strings   ${ITEM}   ${MESSAGE}
