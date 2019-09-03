@@ -39,11 +39,11 @@ seleciono o item "${item}" que retornou
 status retornado é "${status_code}"
     Should Be Equal As Strings   ${RESPONSE.status_code}   ${status_code}
 
-o valor do item "${item}" é "${item_value}"
-    Run Keyword If   '${item}' is not '${Empty}'   Check if item "${item}" has the value "${item_value}"
+o valor do item "${dic_item}" é "${item_value}"
+    Run Keyword If   '${item_value}' is not '${Empty}'   Check if item "${dic_item}" has the value "${item_value}"
 
-a quantidade de itens referentes a "${item}" é "${item_quantity}"
-    Check if item "${item}" has "${item_quantity}" items
+a quantidade de itens referentes a "${dic_item}" é "${item_quantity}"
+    Check if item "${dic_item}" has "${item_quantity}" items
 
 ### API Actions ###
 
