@@ -6,7 +6,7 @@ Resource   ../Resources/ResourceBDD.robot
 
 Registro um novo usuário na API
     Dado que estou autenticado na API
-    Quando informo o email "debora.silvahe18@email.com"
+    Quando informo o email "debora.silvahe20@email.com"
     E informo a senha "debora"
     E quero executar a ação "registrar"
     Então status retornado é "201"
@@ -14,7 +14,7 @@ Registro um novo usuário na API
 
 Faço login do novo usuário na API
     Dado que estou autenticado na API
-    Quando informo o email "debora.silvahe18@email.com"
+    Quando informo o email "debora.silvahe20@email.com"
     E informo a senha "debora"
     E quero executar a ação "login"
     Então status retornado é "200"
@@ -22,12 +22,12 @@ Faço login do novo usuário na API
 
 Valido o registro um usuário repetido na API
     Dado que estou autenticado na API
-    Quando informo o email "debora.silvahe18@email.com"
+    Quando informo o email "debora.silvahe20@email.com"
     E informo a senha "debora"
     E quero executar a ação "registrar"
     Então status retornado é "400"
     E seleciono o item "message" que retornou
-    E a mensagem retornada é "Email já cadastrado"
+    E o valor do item "message" é "Email já cadastrado"
 
 Valido o registro de um usuário com email inválido
     Dado que estou autenticado na API
@@ -36,7 +36,7 @@ Valido o registro de um usuário com email inválido
     E quero executar a ação "registrar"
     Então status retornado é "400"
     E seleciono o item "message" que retornou
-    E a mensagem retornada é "Email inválido"
+    E o valor do item "message" é "Email inválido"
 
 Valido o registro de um usuário com email em branco
     Dado que estou autenticado na API
@@ -44,23 +44,23 @@ Valido o registro de um usuário com email em branco
     E quero executar a ação "registrar"
     Então status retornado é "400"
     E seleciono o item "message" que retornou
-    E a mensagem retornada é "Email ou password em branco"
+    E o valor do item "message" é "Email ou password em branco"
 
 Valido o registro de um usuário com senha em branco
     Dado que estou autenticado na API
-    Quando informo o email "adebora.silvahe18@email.com"
+    Quando informo o email "adebora.silvahe20@email.com"
     E quero executar a ação "registrar"
     Então status retornado é "400"
     E seleciono o item "message" que retornou
-    E a mensagem retornada é "Email ou password em branco"
+    E o valor do item "message" é "Email ou password em branco"
 
 Faço login sem informar a senha do novo usuário
     Dado que estou autenticado na API
-    Quando informo o email "debora.silvahe18@email.com"
+    Quando informo o email "debora.silvahe20@email.com"
     E quero executar a ação "login"
     Então status retornado é "400"
     E seleciono o item "message" que retornou
-    E a mensagem retornada é "Email ou password incorreto"
+    E o valor do item "message" é "Email ou password incorreto"
 
 Faço login sem informar o email do usuário
     Dado que estou autenticado na API
@@ -68,11 +68,11 @@ Faço login sem informar o email do usuário
     E quero executar a ação "login"
     Então status retornado é "400"
     E seleciono o item "message" que retornou
-    E a mensagem retornada é "Email ou password incorreto"
+    E o valor do item "message" é "Email ou password incorreto"
 
 Faço login sem informar nenhum dado do usuário
     Dado que estou autenticado na API
     E quero executar a ação "login"
     Então status retornado é "400"
     E seleciono o item "message" que retornou
-    E a mensagem retornada é "Email ou password incorreto"
+    E o valor do item "message" é "Email ou password incorreto"
