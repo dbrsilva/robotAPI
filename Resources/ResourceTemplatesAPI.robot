@@ -12,4 +12,4 @@ Post Request de usuário na API
     E quero executar a ação "${ACTION}"
     Então status retornado é "${STATUS}"
     E seleciono o item "${ITEM}" que retornou
-    E a mensagem retornada é "${MESSAGE}"
+    E o valor do item "${ITEM}" é "${MESSAGE}"
