@@ -10,7 +10,7 @@ Registro um novo usuário na API
     E informo a senha "debora"
     E quero executar a ação "registrar"
     Então status retornado é "201"
-    E seleciono o item "token" que retornou
+    E seleciono o token que retornou
 
 Faço login do novo usuário na API
     Dado que estou autenticado na API
@@ -18,7 +18,7 @@ Faço login do novo usuário na API
     E informo a senha "debora"
     E quero executar a ação "login"
     Então status retornado é "200"
-    E seleciono o item "token" que retornou
+    E seleciono o token que retornou
 
 Valido o registro um usuário repetido na API
     Dado que estou autenticado na API

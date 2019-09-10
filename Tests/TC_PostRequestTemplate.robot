@@ -4,7 +4,7 @@ Resource   ../Resources/ResourceTemplatesAPI.robot
 *** Test Case ***
 
 Validando retornos usando Post Request
-    [Template]   Post Request de usuário na API
+    [Template]   Post Request cadastro novo usuário na API
     #ACTION     #STATUS   #ITEM     #EMAIL                        #SENHA     #MESSAGE
     registrar   201       token     deboradasilva102@email.com    debora
     login       200       token     deboradasilva102@email.com    debora
